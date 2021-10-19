@@ -4,8 +4,8 @@ public class MyMain {
 
     // Generates a random number between 10 and 20, inclusive
     public static int randomTeen() {
-        // YOUR CODE HERE FOR WARMUP
-        return -1;
+        double random = (Math.random() * 10) + 10;
+        return (int) random;
     }
 
     // Use your previous method to generate three random numbers between 10 and 20, inclusive.
@@ -16,16 +16,31 @@ public class MyMain {
     // The largest number is 20
     // The smallest number is 10
     public static void main(String[] args) {
-        // YOUR CODE HERE FOR WARMUP
+        int x = randomTeen();
+        int y = randomTeen();
+        int z = randomTeen();
+//        System.out.println(x);
+//        System.out.println(y);
+//        System.out.println(z);
+//        System.out.println("The largest number is " + Mathey.max(x, y, z));
+////        System.out.println("The smallest number is " + min);
+        System.out.println(Mathey.max(1, 2));
+        System.out.println(Mathey.max(2, 1));
 
+        System.out.println(Mathey.max(2.2, 19.2));
+        System.out.println(Mathey.max(1.1, 12.2));
 
+        System.out.println(Mathey.max(2, 6, 3));
+        System.out.println(Mathey.max(3, 2, 1));
 
+        System.out.println(Mathey.max(2.2, 6.4, 3.4, 7.8));
+        System.out.println(Mathey.max(8.7, 6.7, 4.3, 9.3));
 
+        System.out.println(Mathey.random(5,10));
+        System.out.println(Mathey.random(9,22));
 
-//         // Uncomment this code later!
-//         System.out.println("Mathey.max tests");
-//         System.out.println(Mathey.max(1, 2)); // 2
-//         System.out.println(Mathey.max(2, 1)); // 2
+        System.out.println(Mathey.random(10));
+        System.out.println(Mathey.random(9));
     }
 
 }

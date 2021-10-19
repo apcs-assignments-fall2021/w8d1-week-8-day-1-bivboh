@@ -7,7 +7,14 @@ public class Mathey {
      * You will need to practice writing the method signature below!
      * public static ...
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int max(int x, int y){
+        if (x > y){
+            return x;
+        }
+       else {
+           return y;
+        }
+    }
 
 
 
@@ -15,15 +22,29 @@ public class Mathey {
     /* Write another method called max that takes **two doubles**
      * Ex. max(1.2, 4.0) => 4.0
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
+    public static double max(double x, double y){
+        if (x > y){
+            return x;
+        }
+        else {
+            return y;
+        }
+    }
 
 
     /* Write another method called max that takes **three integers**
      * Ex. max(1, 4, 2) => 4
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int max(int x, int y, int z){
+        int max = x;
+        if (y > max){
+            max = y;
+        }
+        if (z > max){
+            max = z;
+        }
+        return max;
+    }
 
 
 
@@ -31,7 +52,19 @@ public class Mathey {
     /* Write another method called max that takes **four doubles**
      * Ex. max(1.0, 4.25, 1.3, 2.1) => 4.25
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double max(double x, double y, double z, double a){
+        double max = x;
+        if (y > x){
+            max = y;
+        }
+        if (z > max){
+            max = z;
+        }
+        if (a > max){
+            max = a;
+        }
+        return max;
+    }
 
 
 
@@ -44,7 +77,10 @@ public class Mathey {
      *     randomInteger(1, 4) => 2
      *     randomInteger(1, 4) => 4
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int random(int x, int y) {
+        double random = (Math.random() * (y-x+1)) + (x);
+        return (int) random;
+    }
 
 
 
@@ -56,8 +92,10 @@ public class Mathey {
      *     randomInteger(5) => 5
      *     randomInteger(5) => 0
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static int random(int x) {
+        double random = (Math.random() * (x+1));
+        return (int) random;
+    }
 
 
 
@@ -72,7 +110,12 @@ public class Mathey {
      * Ex. pow(2, 5) => 32
      *     pow(3, 4) => 81
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+//    public static int exponent(int x, int y){
+//        for (int i = 0; i < y; i++){
+//            int ans = x *
+//        }
+//        return ans;
+//    }
 
 
 
