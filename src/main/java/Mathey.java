@@ -77,7 +77,7 @@ public class Mathey {
      *     randomInteger(1, 4) => 2
      *     randomInteger(1, 4) => 4
      */
-    public static int random(int x, int y) {
+    public static int randomInteger(int x, int y) {
         double random = (Math.random() * (y-x+1)) + (x);
         return (int) random;
     }
@@ -92,7 +92,7 @@ public class Mathey {
      *     randomInteger(5) => 5
      *     randomInteger(5) => 0
      */
-    public static int random(int x) {
+    public static int randomInteger(int x) {
         double random = (Math.random() * (x+1));
         return (int) random;
     }
@@ -110,12 +110,13 @@ public class Mathey {
      * Ex. pow(2, 5) => 32
      *     pow(3, 4) => 81
      */
-//    public static int exponent(int x, int y){
-//        for (int i = 0; i < y; i++){
-//            int ans = x *
-//        }
-//        return ans;
-//    }
+    public static int pow(int x, int y){
+        int ans = 1;
+        for (y = y; y != 0 ; y--){
+            ans = ans*x;
+        }
+        return ans;
+    }
 
 
 
@@ -125,7 +126,14 @@ public class Mathey {
      * Ex. abs(2) => 2
      *     abs(-2) => 2
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int abs(int x){
+        if (x < 0){
+            return -x;
+        }
+        else {
+            return x;
+        }
+    }
 
 
 
@@ -134,9 +142,18 @@ public class Mathey {
      * integer value that you get by rounding that double
      * You may assume that the integer is positive
      * Ex. round(2.4) => 2
-     *     round(2.5) => 2
+     *     round(2.5) => 3
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double round(double x){
+        double subtract = x - (int) x;
+        if (subtract < 0.5){
+            return (int) x;
+        }
+        else{
+            return 1-subtract + x;
+        }
+
+    }
 
 
 
@@ -150,7 +167,9 @@ public class Mathey {
      * Ex. floor(2.4) => 2
      *     floor(2.999999999999) => 2
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int floor(double x){
+        return (int) (x);
+    }
 
 
 
@@ -164,7 +183,9 @@ public class Mathey {
      * Ex. ceil(2.99999) => 3
      *     ceil(3.01) => 4
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int ceiling(double x){
+        return ((int) (x)) + 1;
+    }
 
 
 
